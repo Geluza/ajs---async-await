@@ -1,6 +1,13 @@
 export default class GameSaving {
-constructor(data){
-this.data = data;
+  constructor(date) {
+    const { id, created, userInfo } = date;
+    this.created = created;
+    this.id = id;
+    this.userInfo = {
+      id: userInfo.id,
+      name: userInfo.name,
+      level: userInfo.level,
+      points: userInfo.points,
+    };
+  }
 }
-}
-
